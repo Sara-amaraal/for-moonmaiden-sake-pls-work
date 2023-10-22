@@ -1,0 +1,37 @@
+Author:
+    Eduardo Ferreira
+
+Test Cenario:
+    Test JavaScript HomePage
+
+Actions to take:
+    User must be logged on
+    User must have at least one quizz
+    Every user must have admin role
+    Creator must be logged on
+    Creator must have at least one Draft
+    At least one Creator with one Quizz approved must exist
+    Reviewer must be logged on
+    Solver must be logged on
+    At least one Solver must have solved a test
+
+Expected Result:
+    User enters any page except '/login' page
+    User enters landing page and the page 'MyQuizzes' containing all the quizzes is displayed
+    System shows the page 'HallOfFame - Solvers', solvers sorted by score, show solver`s name and score (sum of correct answers in every test)
+    System shows the page 'HallOfFame - Creators', creators sorted by score, show creator`s name and score (number of approved quizzes)
+    System shows the Navigation Bar with username and current page is highlighted
+    System shows the Logo on Navigation Bar, user clicks Logo button and is redirected to the '/' page
+    System shows the Admin button on Navigation Bar, user clicks Admin button and is redirected to the '/admin' page changing as well the background of the respective button to darker blue
+    System shows the Create Quiz button on Navigation Bar, user clicks Create Quiz button and is redirected to the '/create_quiz' page changing as well the background of the respective button to darker blue
+    System shows the Review Quiz button on Navigation Bar, user clicks Review Quiz button and is redirected to the '/review_quiz' page changing as well the background of the respective button to darker blue
+    System shows the Create Test button on Navigation Bar, user clicks Create Test button and is redirected to the '/create_test' page changing as well the background of the respective button to darker blue
+    System shows the Solve Test button on Navigation Bar, user clicks Solve Test button and is redirected to the '/solve_test' page changing as well the background of the respective button to darker blue, if the User is not a Solver the System feedbacks 'Must be a Solver'
+    System shows the Profile button on Navigation Bar, user clicks Profile button and is redirected to the '/profile' page changing as well the background of the respective button to darker blue
+    System shows the Logout button on Navigation Bar, user clicks Logout button and is redirected to the '/login' page
+
+Observed Result:
+    The JavaScript for the HomePage page works fine.
+
+SUCCESS?
+    Yes

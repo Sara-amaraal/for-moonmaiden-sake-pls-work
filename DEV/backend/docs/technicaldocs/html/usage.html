@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>REQUIREMENT 1 &#8212; Quirked Up Software  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Quirked Up Software’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-api.REQ1.views">
+<span id="requirement-1"></span><h1>REQUIREMENT 1<a class="headerlink" href="#module-api.REQ1.views" title="Link to this heading">¶</a></h1>
+<p>This module contains Django views for user registration and login, providing functionality for user authentication and token retrieval</p>
+<dl class="simple">
+<dt>The script consists of the following functions:</dt><dd><ul class="simple">
+<li><p>get_values(payload: dict, keys: List[str]): Used to extract information from the payload dictionary</p></li>
+<li><p>register(request: HttpRequest): Register a new user and return an authentication token.</p></li>
+<li><p>login(request: HttpRequest): Authenticate a user and return an authentication token.</p></li>
+</ul>
+</dd>
+<dt>Usage:</dt><dd><ul class="simple">
+<li><p>Import this module and call the ‘register’ and ‘login’ functions from your Django views.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ1.views.get_values">
+<span class="sig-prename descclassname"><span class="pre">api.REQ1.views.</span></span><span class="sig-name descname"><span class="pre">get_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ1.views.get_values" title="Link to this definition">¶</a></dt>
+<dd><p>HELPER FUNCTION
+Get certant values in a dictionary
+Used to extract payload information</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>payload</strong> (<em>dict</em>) – dictionary to extrat the values</p></li>
+<li><p><strong>keys</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – name of the values to look in the dict</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the value of the key in the dict</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_type_</p>
+</dd>
+<dt class="field-even">Yields<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>_type_</em> – the value of the key in the dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ1.views.login">
+<span class="sig-prename descclassname"><span class="pre">api.REQ1.views.</span></span><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ1.views.login" title="Link to this definition">¶</a></dt>
+<dd><p>LOGIN</p>
+<p>Verify User credentials and retrieve a token for authentication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ1.views.register">
+<span class="sig-prename descclassname"><span class="pre">api.REQ1.views.</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ1.views.register" title="Link to this definition">¶</a></dt>
+<dd><p>REGISTRATION</p>
+<p>Register a User in the database and retrieve a token for authentication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="module-api.REQ2.views">
+<span id="requirement-2"></span><h1>REQUIREMENT 2<a class="headerlink" href="#module-api.REQ2.views" title="Link to this heading">¶</a></h1>
+<p>Code respective to REQ2</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ2.views.creators">
+<span class="sig-prename descclassname"><span class="pre">api.REQ2.views.</span></span><span class="sig-name descname"><span class="pre">creators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ2.views.creators" title="Link to this definition">¶</a></dt>
+<dd><p>Returns all quiz creators</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ2.views.is_solver">
+<span class="sig-prename descclassname"><span class="pre">api.REQ2.views.</span></span><span class="sig-name descname"><span class="pre">is_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ2.views.is_solver" title="Link to this definition">¶</a></dt>
+<dd><p>Checks if the user is a solver</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ2.views.solvers">
+<span class="sig-prename descclassname"><span class="pre">api.REQ2.views.</span></span><span class="sig-name descname"><span class="pre">solvers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ2.views.solvers" title="Link to this definition">¶</a></dt>
+<dd><p>Return all quiz solvers</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ2.views.unfinished_reproved_quizzes">
+<span class="sig-prename descclassname"><span class="pre">api.REQ2.views.</span></span><span class="sig-name descname"><span class="pre">unfinished_reproved_quizzes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ2.views.unfinished_reproved_quizzes" title="Link to this definition">¶</a></dt>
+<dd><p>Returns all the quizzes that belong to the user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – request</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="module-api.REQ3.views">
+<span id="requirement-3"></span><h1>REQUIREMENT 3<a class="headerlink" href="#module-api.REQ3.views" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ3.views.create_quiz">
+<span class="sig-prename descclassname"><span class="pre">api.REQ3.views.</span></span><span class="sig-name descname"><span class="pre">create_quiz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ3.views.create_quiz" title="Link to this definition">¶</a></dt>
+<dd><p>Saves or submits a quiz in the database
+:param request: request with the information about the quiz
+:type request: HttpRequest
+:param state: the state of the quiz
+:type state: int</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HtppResponse with a validation of insert or update in database</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>JsonResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ3.views.delete_quiz">
+<span class="sig-prename descclassname"><span class="pre">api.REQ3.views.</span></span><span class="sig-name descname"><span class="pre">delete_quiz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ3.views.delete_quiz" title="Link to this definition">¶</a></dt>
+<dd><p>Delete a question and all the options with the id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> – dictionary to extrat the values</p></li>
+<li><p><strong>question_id</strong> – id of the question</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>dictionary with a validation of insert or update in database</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ3.views.get_quiz">
+<span class="sig-prename descclassname"><span class="pre">api.REQ3.views.</span></span><span class="sig-name descname"><span class="pre">get_quiz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ3.views.get_quiz" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves a draft or rejected quiz through its’ id
+and also the reviews if it’s a rejected quiz</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – request</p></li>
+<li><p><strong>question_id</strong> (<em>int</em>) – id of the question</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>HttpResponse with the quiz information in JSON format</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JsonResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="module-api.REQ4.views">
+<span id="requirement-4"></span><h1>REQUIREMENT 4<a class="headerlink" href="#module-api.REQ4.views" title="Link to this heading">¶</a></h1>
+</section>
+<hr class="docutils" />
+<section id="module-api.REQ5.views">
+<span id="requirement-5"></span><h1>REQUIREMENT 5<a class="headerlink" href="#module-api.REQ5.views" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ5.views.check_method">
+<span class="sig-prename descclassname"><span class="pre">api.REQ5.views.</span></span><span class="sig-name descname"><span class="pre">check_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ5.views.check_method" title="Link to this definition">¶</a></dt>
+<dd><p>Decorator to restrict an endpoint to a specific HTTP request method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>method</strong> (<em>str</em>) – The expected HTTP request method (e.g., ‘GET’, ‘POST’, ‘PUT’).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The decorated view function.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ5.views.get_test">
+<span class="sig-prename descclassname"><span class="pre">api.REQ5.views.</span></span><span class="sig-name descname"><span class="pre">get_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JsonResponse</span></span></span><a class="headerlink" href="#api.REQ5.views.get_test" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieve questions and options for a specific test.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response containing the questions and options of the requested test.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JsonResponse</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>JsonResponse</strong><strong> (</strong><strong>status code 401</strong><strong>)</strong> – If the requested test does not exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ5.views.grade_test">
+<span class="sig-prename descclassname"><span class="pre">api.REQ5.views.</span></span><span class="sig-name descname"><span class="pre">grade_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token_payload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JsonResponse</span></span></span><a class="headerlink" href="#api.REQ5.views.grade_test" title="Link to this definition">¶</a></dt>
+<dd><p>Save the user’s solutions for a test, calculate the grade, and provide justifications.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object.</p></li>
+<li><p><strong>token_payload</strong> (<em>dict</em>) – The payload extracted from the user’s access token.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response containing the grade and justifications for the user’s selected options.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JsonResponse</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>JsonResponse</strong><strong> (</strong><strong>status code 501</strong><strong>)</strong> – If the user has already completed the same test.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ5.views.list_test">
+<span class="sig-prename descclassname"><span class="pre">api.REQ5.views.</span></span><span class="sig-name descname"><span class="pre">list_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ5.views.list_test" title="Link to this definition">¶</a></dt>
+<dd><p>View function for listing tests not yet solved by the authenticated user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>user_info</strong> (<em>dict</em>) – A dictionary containing user information, retrieved from the user’s access token.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response containing a list of tests that the user can attempt.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JsonResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ5.views.login_required">
+<span class="sig-prename descclassname"><span class="pre">api.REQ5.views.</span></span><span class="sig-name descname"><span class="pre">login_required</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token_var_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verify_exp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ5.views.login_required" title="Link to this definition">¶</a></dt>
+<dd><p>Decorator used for checking if the user is authenticated when accessing an endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token_var_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the variable that will store the token payload. If provided, the decorator will attach the token payload to the view function’s keyword arguments using this variable name. Defaults to None.</p></li>
+<li><p><strong>verify_exp</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the decorator will verify the expiration of the user’s token. Defaults to True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – Raised if <cite>token_var_name</cite> is not a valid variable name.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The decorated view function.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="module-api.REQ6.views">
+<span id="requirement-6"></span><h1>REQUIREMENT 6<a class="headerlink" href="#module-api.REQ6.views" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ6.views.create_test">
+<span class="sig-prename descclassname"><span class="pre">api.REQ6.views.</span></span><span class="sig-name descname"><span class="pre">create_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ6.views.create_test" title="Link to this definition">¶</a></dt>
+<dd><p>Create a new test based on user-specified criteria and available questions.</p>
+<p>This view function allows users to create a new test with specific tags and a minimum of 20 questions.
+Questions are selected from the available pool of questions associated with the provided tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing the user’s request data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response indicating the result of the test creation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JsonResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ6.views.tags">
+<span class="sig-prename descclassname"><span class="pre">api.REQ6.views.</span></span><span class="sig-name descname"><span class="pre">tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ6.views.tags" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieve a list of all available tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object containing the user’s request data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response containing the list of available tags.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JsonResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="module-api.REQ7.views">
+<span id="requirement-7"></span><h1>REQUIREMENT 7<a class="headerlink" href="#module-api.REQ7.views" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ7.views.load_info">
+<span class="sig-prename descclassname"><span class="pre">api.REQ7.views.</span></span><span class="sig-name descname"><span class="pre">load_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ7.views.load_info" title="Link to this definition">¶</a></dt>
+<dd><p>View to load an XML file and create questions from it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response with the status of the operation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JsonResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ7.views.send_info">
+<span class="sig-prename descclassname"><span class="pre">api.REQ7.views.</span></span><span class="sig-name descname"><span class="pre">send_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ7.views.send_info" title="Link to this definition">¶</a></dt>
+<dd><p>View to send questions in XML format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An HTTP response with an XML file.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.REQ7.views.temp">
+<span class="sig-prename descclassname"><span class="pre">api.REQ7.views.</span></span><span class="sig-name descname"><span class="pre">temp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.REQ7.views.temp" title="Link to this definition">¶</a></dt>
+<dd><p>A temporary view for testing purposes. Reads and parses an XML file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An empty JSON response.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JsonResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="module-api.REQ8.views">
+<span id="requirement-8"></span><h1>REQUIREMENT 8<a class="headerlink" href="#module-api.REQ8.views" title="Link to this heading">¶</a></h1>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Quirked Up Software</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">REQUIREMENT 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ1.views.get_values"><code class="docutils literal notranslate"><span class="pre">get_values()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ1.views.login"><code class="docutils literal notranslate"><span class="pre">login()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ1.views.register"><code class="docutils literal notranslate"><span class="pre">register()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-api.REQ2.views">REQUIREMENT 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ2.views.creators"><code class="docutils literal notranslate"><span class="pre">creators()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ2.views.is_solver"><code class="docutils literal notranslate"><span class="pre">is_solver()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ2.views.solvers"><code class="docutils literal notranslate"><span class="pre">solvers()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ2.views.unfinished_reproved_quizzes"><code class="docutils literal notranslate"><span class="pre">unfinished_reproved_quizzes()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-api.REQ3.views">REQUIREMENT 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ3.views.create_quiz"><code class="docutils literal notranslate"><span class="pre">create_quiz()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ3.views.delete_quiz"><code class="docutils literal notranslate"><span class="pre">delete_quiz()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ3.views.get_quiz"><code class="docutils literal notranslate"><span class="pre">get_quiz()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-api.REQ4.views">REQUIREMENT 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#module-api.REQ5.views">REQUIREMENT 5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ5.views.check_method"><code class="docutils literal notranslate"><span class="pre">check_method()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ5.views.get_test"><code class="docutils literal notranslate"><span class="pre">get_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ5.views.grade_test"><code class="docutils literal notranslate"><span class="pre">grade_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ5.views.list_test"><code class="docutils literal notranslate"><span class="pre">list_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ5.views.login_required"><code class="docutils literal notranslate"><span class="pre">login_required()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-api.REQ6.views">REQUIREMENT 6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ6.views.create_test"><code class="docutils literal notranslate"><span class="pre">create_test()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ6.views.tags"><code class="docutils literal notranslate"><span class="pre">tags()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-api.REQ7.views">REQUIREMENT 7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ7.views.load_info"><code class="docutils literal notranslate"><span class="pre">load_info()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ7.views.send_info"><code class="docutils literal notranslate"><span class="pre">send_info()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api.REQ7.views.temp"><code class="docutils literal notranslate"><span class="pre">temp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-api.REQ8.views">REQUIREMENT 8</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Quirked Up Software’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, PL2.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/usage.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

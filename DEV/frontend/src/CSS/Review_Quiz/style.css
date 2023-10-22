@@ -1,0 +1,60 @@
+.container_geral {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+    align-content: flex-start;
+    margin-left: 9%;
+    margin-top: -2%;
+}
+
+
+.container_justif{
+    width: 100%;
+    height: auto;
+    margin-top: -3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+    align-content: flex-start;
+    gap:12vw;
+}
+
+.container_para_botoes_submit_cancel {
+    background-color: transparent;
+    margin-right: 6%;
+    margin-top: -3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    align-content: flex-start;
+    gap:1.2vw;
+}
+
+
+.container_respostas > * {
+    max-width: 80rem;
+    margin: auto;
+    margin-top: 2%;
+    width: 100%;
+    gap: 10px 80px;
+    flex-wrap: wrap;  
+    display: flex;
+}
+
+.container_estado_caixa {
+    min-width: 20%;
+    max-width: 23%;
+    height:275px;
+    border-radius: 20px;  
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    margin: auto;
+    margin-right: 2%;  
+}

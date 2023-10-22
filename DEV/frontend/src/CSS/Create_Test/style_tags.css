@@ -1,0 +1,49 @@
+.container_tags {
+    display: flex;  /*enables the flexbox for all the children*/
+    justify-content: center;
+    flex-flow: row wrap; /*left to right*/
+    align-content: flex-start; /*contents begin showing at top start of container*/
+    gap:50px; /* gap between boxes, efective to left, right, up and down */
+    row-gap: 50px; /* useless, the "gap" above already makes them 50px separated from each other, including the rows gaps*/ 
+    margin-top: 0%; 
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;  
+}
+
+.container_submit_cancel_tags {
+    display: flex;
+    justify-content: center;/*main axis/horizontal*/
+    align-items: center;/*cross axis/vertical*/
+    flex-flow: row; /*fits all the contents in only one row*/
+    align-content: flex-start; /*begins at top*/
+    margin-left: 30%; /*left side margins to parent box*/
+    margin-right: 30%;
+}
+
+.tag_button{
+    background-color: rgb(159, 203, 234); 
+    color:rgb(25, 80, 119);   /*Color of contents inside, ex: text*/
+    border: solid rgb(60, 59, 59); /*creates continuous border arround the tag button*/
+}
+
+.tag_button:hover{ /* when mouse hovers over the button the colors change to:*/
+    background-color: whitesmoke;
+    border: solid rgb(60, 59, 59);/*useless to specify color here, since its the same as the one in "color" just below */
+    color: rgb(60, 59, 59); /*if the border didn't specify color, it would adopt this one, beware*/ 
+}
+
+.tag_button_click{ /*on click it, changes background and border color, the command 'click' dosen't exist so original dev made a specific class for it*/
+    background-color: whitesmoke; 
+    border: solid rgb(60, 59, 59);
+    color: rgb(60, 59, 59);
+} /*it works, but it does exactly the same as the hover function, background, border and color, so it wont have any visual changes*/
+
+#test_title_box { /*specific to that one test title box*/
+    height: 95px; /*how tall the box is*/
+    margin-top: -1%;
+}
+
+#CreateTest_instruction {
+    background-color: rgb(213, 227, 237);
+}

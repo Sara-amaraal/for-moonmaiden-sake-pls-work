@@ -1,0 +1,92 @@
+/*------------------------------BODYGERAL------------------------------*/
+:root {
+    --back: #ebf0f5; /*background*/
+    --caixas: whitesmoke; /*background caixas*/
+    --borda: rgb(60, 59, 59); /*contornos + cor texto*/
+    --click: rgb(81, 167, 230); /*clicável*/
+    font-family: Roboto, sans-serif;
+    user-select: none;
+}
+
+/*------------------------------NAVBAR------------------------------*/
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    vertical-align:middle;
+    width: 100%;
+    position: sticky;
+    height:7%;
+    top: 0;
+    background-color: rgb(159, 203, 234);
+    
+}
+
+
+
+#logo_return_home {
+vertical-align: middle;
+margin:0% 20%;
+height:7%;
+}
+
+#nomesite {
+    float: left;
+}
+
+#links_nav {
+    
+    display: flex;
+    list-style-type: none;
+    width:100%;
+    margin:0% 15%;
+    color: var(--borda);
+}
+
+#links_nav li {
+    width:100%;
+    text-align: center;
+    font-size:155%;
+    
+}
+
+
+#links_nav li b:hover {
+    padding:2% 7%;
+}
+
+#links_nav li b:hover {
+    cursor: pointer;
+    background-color: var(--click);
+    border-radius: 8px;
+}
+
+.active-click {
+    cursor: pointer;
+    background-color: var(--click);
+    border-radius: 10px;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: var(--borda);
+}
+
+#navbar_username {
+    padding:0;
+    display: flex;
+    font-size: 170%;
+    margin-right: 0% 10%
+}
+
+#logout {
+    display: flex;
+}
+
+#logout_img {
+    margin: 0% 60%;
+    float:right;
+    
+}
+
+/* o código funciona mas é necessário fazer algumas alterações no que toca a unidades*/

@@ -1,0 +1,141 @@
+
+/*------------------------------BODY/GERAL------------------------------*/
+html {
+    font-family: Roboto, sans-serif;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #f3f3f3;
+    user-select: none;
+    text-align: justify;
+    hyphens: manual;
+    font-size: calc(16px - 0.01vmin);
+}
+
+:root {
+    background-color:hwb(212 93% 0%);
+}
+
+body {
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------------LINHA------------------------------*/
+.vl {
+    border-left: 6px solid #3fa8f4;
+    border-radius: 10px;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 35%;
+}
+
+/*------------------------------LOGIN/REGISTER------------------------------*/
+/*IMAGEM LOGO*/
+#imagem-logo {
+    position: center;
+    display: flex;
+    margin: -9% auto -7% auto;
+    padding: 0;
+    width: 35%;
+    overflow: hidden;
+}
+
+#logo-login {
+    margin: -7% 34% -7% ;
+    padding: 0;
+    height: auto;
+    width: 30%;
+    overflow: hidden;
+}
+
+/*FORMULÁRIO*/
+.caixa-form { /* CAIXA DE CADA FORM INDIVIDUAL*/
+    width: 100%;
+    margin: 0% 2% 2% 2%;
+    padding: 1%;
+    border-radius: 5px;
+    font-size: 120%;
+}
+
+.title-form{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    font-size: 270%;
+    color: rgb(60, 59, 59);
+    text-shadow: 1.5px 3px 3px #51a7e6;
+}
+
+.formulario p { /*TEXTO A EXPLICAR O PROPÓSITO DO FORM*/
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+
+.texto-info{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.field { /*CONTEÚDOS REPARTIDOS POR TEMA*/
+    width: 70%;
+    margin: 1.5% auto 0 auto;
+}
+
+.field label { /*TÍTULO DO CAMPO A PREENCHER*/
+    margin: 1% 1% 1% 1.5%;
+    font-size: 1em;
+    width: 100%;
+    font-weight: bold;
+}
+
+input[type=text], input[type=password] { /*CAMPO A PREENCHER*/
+    width: 90%;
+    padding-left: 1%;
+    height: 60px;
+    line-height: 2%;
+    border-radius: 3px;
+    border: solid rgb(60, 59, 59);
+    outline: none;
+}
+
+input[type=submit_login] { /*BOTÃO ENVIAR*/
+    font-size: 20px;
+    text-align: center;
+    border-radius: 15px;
+    width: 150px;
+    margin: 3% auto 3% auto;
+    height: 75px;
+    background-color: whitesmoke;
+    border: solid rgb(60, 59, 59);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+input[type=submit_login]:hover { /*BOTÃO ENVIAR QUANDO CARREGADO OU COM O RATO EM CIMA*/
+    background-color: rgb(159, 203, 234);
+    color:rgb(36, 100, 145);
+    border: solid rgb(60, 59, 59);
+    font-weight: 1000;
+}
+
+#caixa-login{
+    float: left;
+    display:inline-block;
+    width:40%;
+}
+
+#caixa-register{
+    float: right;
+    display:inline-block;
+    width:40%;
+}

@@ -1,0 +1,25 @@
+
+.container_header{
+   width:auto;
+
+}
+
+.username_img{
+    position: absolute;
+    margin-top: 25px;
+    margin-right:75px;
+    width:auto;
+    top:0;
+    right:0;
+    height: auto;
+    font-size :14px;
+   
+    
+}
+
+#profile_msg {
+    width: 70%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

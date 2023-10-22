@@ -1,0 +1,51 @@
+{/*sets margins for an element*/}
+.container_solve_test {
+    margin: auto;
+    margin-top: 3.5%;
+    margin-right: 6%;
+    margin-left: 3%;
+}
+{/*sets styles for all direct children of the element*/}
+.container_solve_test > * {
+    width: 100%;
+    gap: 10%;
+    flex-wrap: wrap;
+    display: flex;
+    
+}
+{/*sets margins, widths and flexbox properties for the element "container_solve_test_options"*/}
+.container_solve_test_options {
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 17%;
+    margin-left: 2%;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    
+}
+{/*sets the margins, background color and font size, of the element "justification_box"*/}
+#justification_box {
+    margin-top: -15%;
+    margin-bottom: 7%;
+    background-color: rgb(213, 227, 237);
+    font-size: 200%;
+}
+{/*the two below define the background color if the answer is correct or false*/}
+.solve_test_correto{
+    background-color: rgb(30, 170, 30);
+    color:rgb(0, 75, 0);
+}
+
+.solve_test_errado{
+    background-color: rgb(212, 15, 15);
+    color:rgb(104, 12, 12);
+}
+{/*sets margins and uses flexbox to style elements from the class that is referring too*/}
+.container_solve_test_buttons {
+    margin: auto;
+    margin-bottom: 3%;
+    margin-left: 33.85%;
+    display: flex;
+
+}

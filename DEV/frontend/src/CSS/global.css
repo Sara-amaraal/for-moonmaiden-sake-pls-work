@@ -1,0 +1,111 @@
+/*specific html selector*/
+:root {
+    font-family: Roboto, sans-serif;
+    src: url(../FONT/RobotoSerif-Italic-VariableFont_GRAD,opsz,wdth,wght.ttf);
+    font-size: 62.5%;
+
+    background-color:hwb(210 92% 4%);
+    overflow: hidden;
+    overflow-y: auto;
+    user-select: none;
+    text-align: justify;
+    hyphens: manual;
+}
+
+
+/*global selector*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+    color: #535353;
+}
+
+
+/*encapsulates questions' and justifications' general rules*/
+.box {
+    font-size: 4rem;
+    margin-bottom: 2%;
+    padding: 20px;
+    background: whitesmoke;
+    font-weight:500;
+    border: solid  rgb(60, 59, 59); ;
+    border-radius: 15px;
+}
+
+.pergunta {
+    margin-top: 1.5rem;
+    margin-left: 2%;
+}
+
+.justificacao {
+    font-family: Roboto, sans-serif;
+    width: 73%;
+    height: 11vw;
+    font-size: 3rem;
+    margin-left: 2%;
+    margin-bottom: 15px;
+}
+
+
+/*----------answers' options----------*/
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 45%;
+    font-size: 1.8rem;
+    border: 3px solid  rgb(60, 59, 59);
+    background-color: whitesmoke;  
+}
+
+.choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: rgb(159, 203, 234);
+    color: whitesmoke;
+}
+
+.choice-text {
+    padding: 1.5rem;
+    width: 80%;
+    overflow-wrap:break-word;
+}
+
+.correto {
+    background-color: rgb(30, 170, 30);
+    color:rgb(0, 75, 0);
+}
+
+
+/*----------buttons and buttons' states----------*/
+
+.button {
+    font-size: 20px;
+    width: 150px;
+    height: 75px;
+    border: solid rgb(60, 59, 59);;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    font-weight: 1000;
+    background-color: rgb(64, 169, 245);
+    color:rgb(36, 100, 145);
+    border: solid rgb(39, 100, 145);
+}
+
+.button:active {
+
+    transform: translateY(2px);
+}
+
+a {
+    text-decoration: none;
+}

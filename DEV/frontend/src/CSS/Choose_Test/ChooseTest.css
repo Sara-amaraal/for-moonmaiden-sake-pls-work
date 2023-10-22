@@ -1,0 +1,25 @@
+.chooseTest_box{
+    width: 90%;
+    font-size: 20px;
+    position: relative;
+    border: solid rgb(60, 59, 59);
+}
+
+.chooseTest_box:hover{
+    background-color: rgb(159, 203, 234);
+    cursor: pointer;
+}
+
+.ChooseTest_tag p{
+    font-size: 20px;
+    margin: 10% 20% 1% 20%;
+    background-color: rgb(131, 172, 201);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.ChooseTest_tag {
+    display: inline-block;
+    width: 7%;
+    text-align: center;
+}

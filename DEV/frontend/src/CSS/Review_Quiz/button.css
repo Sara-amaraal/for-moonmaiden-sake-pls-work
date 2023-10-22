@@ -1,0 +1,76 @@
+/* template buttons box */
+.container_for_button_acc_rej {
+    margin: 20px 0px 50px 20px;
+    max-width: 500px;
+    min-height: auto;
+    margin-inline: auto;
+    gap: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    align-content: flex-start;  
+}
+
+/* text buttons for accept and reject */
+.aceites, .rejeitadas{
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+/* accept button when mouse hover */
+.accept_review:hover{
+    background-color: rgb(16, 178, 16);
+    color:rgb(8, 78, 8);
+    border: solid rgb(8, 78, 8);
+}
+
+/* accept button when clicked */
+.accept_review_click{
+    background-color: rgb(16, 178, 16);
+    color:rgb(8, 78, 8);
+    border: solid rgb(8, 78, 8);
+}
+
+/* reject button when mouse hover */
+.reject_review:hover{
+    background-color: rgb(212, 15, 15);
+    color:rgb(104, 12, 12);
+    border: solid rgb(104, 12, 12);
+}
+
+/* reject button when clicked */
+.reject_review_click{
+    background-color: rgb(212, 15, 15);
+    color:rgb(104, 12, 12);
+    border: solid rgb(104, 12, 12);
+}
+
+/* template buttons changes for submit and cancel */
+.submit, .cancel{
+    margin:auto;
+    margin-top: 0%;
+}
+
+/* submit button when mouse hover */
+.submit:hover{
+    background-color: rgb(81, 167, 230);
+    color:rgb(25, 80, 119);
+    border: solid rgb(25, 80, 119);
+}
+
+/* submit button when clicked */
+.submit_click{
+    background-color: rgb(81, 167, 230);
+    color:rgb(25, 80, 119);
+    border: solid rgb(25, 80, 119);
+}
+
+/* cancel button when mouse hover */
+.cancel:hover{
+    background-color: rgb(212, 15, 15);
+    color:rgb(104, 12, 12);
+    border: solid rgb(104, 12, 12);
+}
